@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, {useEffect, useState} from "react";
 import FileUpload from "./FileUpload";
 import FilesList from "./FilesList";
 import axios from "axios";
-import {Box, Divider, Paper} from "@mui/material";
+import {Box, Paper} from "@mui/material";
 
 const FileManager = () => {
     const [files, setFiles] = useState([]);
@@ -21,9 +21,8 @@ const FileManager = () => {
 
     const handleFileUploaded = (newFile) => {
         setFiles((prevFiles) => {
-            const updatedFiles = [...prevFiles, newFile];
             // console.log("Updated Files List:", updatedFiles);
-            return updatedFiles;
+            return [...prevFiles, newFile];
         });
     };
     const handleFileUpdated = () => {

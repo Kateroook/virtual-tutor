@@ -77,9 +77,12 @@ const Chat = () => {
             flexDirection: 'column',
             justifyContent: 'space-between',
             }}>
-            <Typography variant="h4" gutterBottom align="left">
-                Virtual Tutor Chat
-            </Typography>
+            <Box display="flex" alignItems="center" gap={2}>
+                <img src="/HIPO.svg" alt="Hippo Logo" style={{ height: '30px', filter: 'invert(50%) sepia(100%) saturate(5000%) hue-rotate(180deg)' }}/>
+                <Typography variant="h4" gutterBottom align="left">
+                    Hippo Chat
+                </Typography>
+            </Box>
             <List sx={{ flex: 1, overflowY: 'auto' }}>
                 {messages.map((msg, index) => (
                     <ListItem

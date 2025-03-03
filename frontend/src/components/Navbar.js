@@ -12,11 +12,11 @@ const Navbar = () => {
             <Toolbar>
                 {/* App Name */}
                 <Typography
-                    variant="h6"
+                    variant="h5"
                     component="div"
                     sx={{ flexGrow: 1, fontWeight: 'bold', cursor: 'pointer' }}
                 >
-                    Virtual Tutor
+                    Hippo
                 </Typography>
                 {isAuthenticated ? (
                     <Box display="flex" alignItems="center" gap={2}>

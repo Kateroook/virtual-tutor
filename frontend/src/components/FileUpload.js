@@ -82,6 +82,8 @@ const FileUpload = ( {onFileUploaded} ) => {
         setFile(selectedFile);
         setMessage("");
         setOpenModal(true);
+        fetchSubjects();
+
     };
 
     const handleUpload = async () => {
@@ -91,7 +93,6 @@ const FileUpload = ( {onFileUploaded} ) => {
             setOpenSnackbar(true);
             return;
         }
-
         const formData = new FormData();
         formData.append("file", file);
         formData.append("title", title);

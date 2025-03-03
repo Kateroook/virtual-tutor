@@ -80,11 +80,11 @@ function cleanText(text) {
  */
 async function chunkText(text) {
     const splitter = new RecursiveCharacterTextSplitter({
-        chunkSize: 400,  // ~500 characters per chunk
-        chunkOverlap: 150,// Helps preserve context
+        chunkSize: 400,
+        chunkOverlap: 150,
         separators: [
             "\n\n", // Paragraph breaks
-            "\n"   // Line breaks (e.g., bullet points)
+            "\n"   // Line breaks
         ],
     });
 

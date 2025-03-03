@@ -202,13 +202,18 @@ const FilesList = ({ files, onFileUpdated }) => {
                     <Typography variant="h4" sx={{ textAlign: "left", mb: 2 }}>
                         Subjects
                     </Typography>
+                    {Object.keys(subjects).length === 0 ? (
+                            <Typography variant="body1" sx={{ textAlign: "left", mb: 2 }}>
+                                There are no subjects. Please upload some files to see the list.
+                            </Typography>
+                        ) : (
                     <List>
                         {Object.keys(subjects).map((subject) => (
                             <ListItem key={subject} button onClick={() => setSelectedSubject(subject)} sx={{ borderRadius: "12px", mb: 1, backgroundColor: "white", boxShadow: "0px 2px 4px rgba(0, 0, 0, 0.1)" }}>
                                 <ListItemText primary={<Typography variant="h6">{subject}</Typography>} sx={{ textAlign: "left" }} />
                             </ListItem>
                         ))}
-                    </List>
+                    </List>)}
                 </>
             )}
             <Box sx={{ mt: 2, height: "180px", overflowY: "auto" }}>

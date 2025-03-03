@@ -17,7 +17,7 @@ async function searchSimilarDocuments(queryEmbedding, selectedFileIds) {
             FROM "Embeddings" e
             JOIN "FileTexts" ft ON ft.id = e."fileTextId"
             JOIN "Files" f ON f.id = ft."fileId"
-            WHERE e.embedding <=> %s::vector <= 0.3
+            WHERE e.embedding <=> %s::vector <= 0.2
             ${selectedFileIds.length > 0 ? `AND f.id IN (${formattedFileIds})` : ''}
             ORDER BY similarity ASC
         )

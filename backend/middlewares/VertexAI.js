@@ -13,7 +13,7 @@ async function generateAnswerWithVertexAI(question, sources) {
         if (sources.length > 0) {
             prompt += `Here are the relevant documents:\n`;
             sources.forEach((source, index) => {
-                prompt += `\nDocument ${index + 1}: ${source.text}\n`;
+                prompt += `\nDocument ${index + 1}: ${source.url}\n`;
             });
             prompt += `\nPlease provide a concise and accurate answer based on the information above.`;
         } else {

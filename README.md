@@ -2,6 +2,8 @@
 
 The Hippo Virtual Tutor project is an intelligent learning assistant that extracts text from educational documents (PDFs and DOCX files), processes the content, and prepares structured learning materials like Q&A and flashcards.
 
+[See demo](https://drive.google.com/file/d/11i34eOJ4MGyg3vGzM9AGlSiIQ3jbrGri/view?usp=sharing)
+
 ## Features 
 
 - 📄 Document Processing: Extracts high-quality text from PDFs and DOCX files.
